@@ -12,7 +12,61 @@ import {
   IconButton,
   Text,
   Image,
+  FormControl,
+  FormLabel,
+  Input,
+  toast,
 } from "@chakra-ui/react";
+import { useState } from "react";
+
+
+
+// const postDetails = (pics) => {
+//   // const [pic, setPic] = useState();
+//   // const [picLoading, setPicLoading] = useState(false);
+//   //setPicLoading(true);
+//   if (pics === undefined) {
+//     toast({
+//       title: "Please Select an Image!",
+//       status: "warning",
+//       duration: 5000,
+//       isClosable: true,
+//       position: "bottom",
+//     });
+//     return;
+//   }
+//   console.log(pics);
+//   if (pics.type === "image/jpeg" || pics.type === "image/png") {
+//     const data = new FormData();
+//     data.append("file", pics);
+//     data.append("upload_preset", "mern_chat_app");
+//     data.append("cloud_name", "dgj1jy1wq");
+//     fetch("https://api.cloudinary.com/v1_1/dgj1jy1wq/image/upload", {
+//       method: "post",
+//       body: data,
+//     })
+//       .then((res) => res.json())
+//       .then((data) => {
+//         setPic(data.url.toString());
+//         console.log(data.url.toString());
+//         setPicLoading(false);
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//         setPicLoading(false);
+//       });
+//   } else {
+//     toast({
+//       title: "Please Select an Image!",
+//       status: "warning",
+//       duration: 5000,
+//       isClosable: true,
+//       position: "bottom",
+//     });
+//     setPicLoading(false);
+//     return;
+//   }
+// };
 
 const ProfileModal = ({ user, children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -48,6 +102,15 @@ const ProfileModal = ({ user, children }) => {
               src={user.pic}
               alt={user.name}
             />
+            {/* <FormControl id="pic">
+              <FormLabel>Change Profile Pic</FormLabel>
+              <Input
+                type="file"
+                p={1.5}
+                accept="image/*"
+                onChange={(e) => postDetails(e.target.files[0])}
+              />
+            </FormControl> */}
             <Text
               fontSize={{ base: "28px", md: "30px" }}
               fontFamily="Work sans"

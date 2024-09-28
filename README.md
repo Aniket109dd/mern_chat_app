@@ -43,6 +43,15 @@ Sign Up Page -
 
 
 
+Search Users - 
+
+![image](https://github.com/user-attachments/assets/c2f4412d-4807-4158-8c6e-65b4037a2f34)
+
+
+
+
+
+
 users Profile -  
 
 ![image](https://github.com/user-attachments/assets/fea7a9c0-e058-4a4a-80ef-95e873cac72d)
